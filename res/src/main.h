@@ -5,41 +5,41 @@
 #include "../includes/main.h"
 
 /* structs */
-typedef enum attribute_type
+typedef struct attribute_value_s
 {
-	INT,
-	CHAR,
-	BOOL,
-	FLOAT,
-	TIME,
-	MONEY,
-	STRING
-} attribute_type;
+	enum DataType
+	{
+		INT,
+		CHAR,
+		BOOL,
+		FLOAT,
+		TIME,
+		MONEY,
+		STRING
+	} type;
 
-typedef union
-{
-	int int_value;
-	char char_value;
-	bool bool_value;
-	float float_value;
-	time_t time_value;
-	float money_value;
-	char *string_value;
-} attribute_value;
+	union 
+	{
+		int int_value;
+		char char_value;
+		bool bool_value;
+		float float_value;
+		time_t time_value;
+		float money_value;
+		char *string_value;
+	} value;
+} attribute_value_t;
 
-typedef struct command_s
+typedef struct action_s
 {
-	char *action;
-	table_t *source;
-	table_t *destination;
-	/* condition with type idk */
-} command_t;
+	char *name;
+	int (*function)(void); /* idk how to name this */
+} action_t;
 
 typedef struct attribute_s
 {
-	attribute_type type;
-	attribute_value value;
-	uint8_t null_checker
+	attribute_value_t value;
+	uint8_t null_checker;
 	uint8_t constrains;
 } attribute_t;
 
@@ -52,8 +52,16 @@ typedef struct table_s
 	time_t creation_datetime;
 	time_t modification_datetime;
 	attribute_t *primary_key;
-	attribute_t **foreign_key
+	attribute_t **foreign_key;
 } table_t;
+
+typedef struct command_s
+{
+	action_t action;
+	table_t *source;
+	table_t *destination;
+	/* condition with type idk */
+} command_t;
 
 typedef struct schema_s
 {
@@ -80,5 +88,7 @@ typedef struct database_s
 /* function prototypes */
 int start(void);
 int parse(char *);
+
+/* getter-setter function prototypes */
 
 #endif

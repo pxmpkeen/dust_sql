@@ -6,6 +6,5 @@
  */
 int parse(char *query)
 {
-	action
 	return (0);
 }
