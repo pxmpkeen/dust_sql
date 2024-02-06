@@ -1,0 +1,3 @@
+/home/cahid/CLionProjects/dust_sql/cmake-build-debug/CMakeFiles/dust_sql.dir
+/home/cahid/CLionProjects/dust_sql/cmake-build-debug/CMakeFiles/edit_cache.dir
+/home/cahid/CLionProjects/dust_sql/cmake-build-debug/CMakeFiles/rebuild_cache.dir

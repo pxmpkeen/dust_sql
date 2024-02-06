@@ -1,0 +1,12 @@
+# ninja log v5
+0	19	1707203231713801510	build.ninja	cca02ff60ead8a7e
+1	53	1707203231757779659	CMakeFiles/dust_sql.dir/res/src/start.c.o	25ae10e98946358d
+0	57	1707203231769773699	CMakeFiles/dust_sql.dir/res/src/parse.c.o	650b6ab9472379e5
+0	75	1707203231789763767	CMakeFiles/dust_sql.dir/res/src/main.c.o	9d7b514d8c1439b
+75	105	1707203231817749862	dust_sql	7a809bd75acd527
+0	28	1707203270890903378	CMakeFiles/dust_sql.dir/res/src/main.c.o	9d7b514d8c1439b
+28	48	1707203270906898499	dust_sql	7a809bd75acd527
+2	53	1707203455320315556	CMakeFiles/dust_sql.dir/res/src/start.c.o	25ae10e98946358d
+2	63	1707203455352310242	CMakeFiles/dust_sql.dir/res/src/parse.c.o	650b6ab9472379e5
+1	65	1707203455356309578	CMakeFiles/dust_sql.dir/res/src/main.c.o	9d7b514d8c1439b
+65	88	1707203455368307585	dust_sql	7a809bd75acd527
