@@ -3,10 +3,10 @@ project(dust_sql C)
 
 set(CMAKE_C_STANDARD 11)
 
-include_directories(res/includes)
-include_directories(res/src)
+include_directories(includes)
+include_directories(src)
 
 add_executable(dust_sql
-        res/src/main.c
-        res/src/parse.c
-        res/src/start.c)
+        src/main.c
+        src/parse.c
+        src/start.c)
