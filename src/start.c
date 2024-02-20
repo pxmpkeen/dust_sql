@@ -7,16 +7,17 @@
 int start(void)
 {
 	char *query;
-	size_t buffer_size = 0;
+    int status = 0;
+    char **t_query;
 
-	while (true)
-	{
-		if (getdelim(&query, &buffer_size, ';', stdin) == -1)
-			break;
-		if (parse(query) == -1)
-		{
-			/* errno and exit */
-		}
-	}
-	return (-1);
+    query = malloc(QURRY_BUF_SIZE);
+    status = readcom(&query);
+
+    if (!status)
+        t_query = parse(query);
+    else
+        return (1);
+    if (t_query == NULL)
+        return (1);
+    return 0;
 }

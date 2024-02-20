@@ -9,4 +9,5 @@ include_directories(src)
 add_executable(dust_sql
         src/main.c
         src/parse.c
-        src/start.c)
+        src/start.c
+        src/readcom.c)

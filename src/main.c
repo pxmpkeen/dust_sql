@@ -9,6 +9,8 @@
  */
 int main(int argc, char **argv)
 {
-	start();
-	return (0);
+    char *query = malloc(512);
+    int ret;
+	ret = start();
+	return (ret);
 }
